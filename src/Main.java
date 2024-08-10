@@ -74,6 +74,8 @@ public class Main {
             } else {
                 System.out.println("Осень");
             }
+        }else {
+            System.out.println("неверный месяц");
         }
     }
 
