@@ -23,7 +23,7 @@ public class Main {
             } else {
                 System.out.println("становите облегченную версию приложения для iOS по ссылке");
             }
-        } else if (os == 1) {
+        } else if (os == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке");
         } else {
             System.out.println("Установите версию приложения для Android по ссылке");
@@ -31,6 +31,7 @@ public class Main {
     }
 
     public static void task3() {
+        System.out.println("напишите год для проверки");
         short Year = cin.nextShort();
         if (Year > 1584) {
             if ((Year % 4 == 0 && Year % 100 != 0) || (Year % 400 == 0)) {
@@ -44,6 +45,7 @@ public class Main {
     }
 
     public static void task4() {
+        System.out.println("Напишите дистанцию");
         short distance = cin.nextShort();
         if (distance < 100) {
             byte days = 1;
@@ -53,7 +55,7 @@ public class Main {
             if (distance > 60) {
                 days++;
             }
-            System.out.printf("доставка %s дней", days);
+            System.out.printf("доставка %s д.\n", days);
         } else {
             System.out.println("доставка не осуществляется");
         }
@@ -76,6 +78,14 @@ public class Main {
     }
 
     public static void main(String[] args) {
-
+        byte os = task1();
+        System.out.println("\u001B[32m" + "-".repeat(50) + "\u001B[0m");
+        task2(os);
+        System.out.println("\u001B[32m" + "-".repeat(50) + "\u001B[0m");
+        task3();
+        System.out.println("\u001B[32m" + "-".repeat(50) + "\u001B[0m");
+        task4();
+        System.out.println("\u001B[32m" + "-".repeat(50) + "\u001B[0m");
+        task5();
     }
 }
