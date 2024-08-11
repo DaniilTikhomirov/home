@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class Main {
-    public Scanner cin = new Scanner(System.in);
 
     public static void task1() {
         for (int i = 1; i <= 10; i ++){
