@@ -17,6 +17,10 @@ public class Main {
 
         DeadSoul.setYearBook(1842);
         System.out.println("Dead soul year book = " + DeadSoul.getYearBook());
+        System.out.println(DeadSoul.toString());
+        System.out.println(Pushkin.toString());
+        System.out.println(Pushkin.equals(Gogol));
+        System.out.println(DeadSoul.equals(Poltava));
 
     }
 }
