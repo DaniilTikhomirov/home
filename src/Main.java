@@ -3,7 +3,7 @@ public class Main {
         String firstName = "Иван";
         String middleName = "Ивановичь";
         String lastName = "Иванов";
-        String fullName = "Иванёв Иван Ивановичь";
+        String fullName = lastName + firstName + middleName;
         fullName = fullName.replace("ё", "е");
         System.out.printf("Ф. И. О. сотрудника — %s\n", fullName);
         String upFullName = fullName.toUpperCase();
