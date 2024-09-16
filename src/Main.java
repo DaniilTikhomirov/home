@@ -46,6 +46,12 @@ public class Main {
         }
     }
 
+    public static void reversePrint(char[] array) {
+        for (int i = array.length - 1; i >= 0; i--) {
+            System.out.print(array[i]);
+        }
+    }
+
     public static void main(String[] args) {
         int[] money = new int[5];
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
@@ -57,8 +63,7 @@ public class Main {
                         " Максимальная сумма трат за неделю составила %s рублей\n",
                 minElement(money), maxElement(money));
         System.out.printf("Средняя сумма трат за месяц составила %s рублей\n", averageElement(money));
-        reverseArray(reverseFullName);
-        System.out.println(Arrays.toString(reverseFullName));
+        reversePrint(reverseFullName);
 
     }
 }
