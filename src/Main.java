@@ -17,17 +17,16 @@ public class Main {
     public static void task2(byte os) {
         System.out.println("напишите год вашего телефона");
         short clientDeviceYear = cin.nextShort();
-        if (clientDeviceYear < 2015) {
-            if (os == 1) {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке");
-            } else {
-                System.out.println("становите облегченную версию приложения для iOS по ссылке");
-            }
-        } else if (os == 0) {
-            System.out.println("Установите версию приложения для iOS по ссылке");
-        } else {
-            System.out.println("Установите версию приложения для Android по ссылке");
+        if (os == 1 && clientDeviceYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        } if(os == 0 && clientDeviceYear < 2015) {
+            System.out.println("становите облегченную версию приложения для iOS по ссылке");
         }
+        if (os == 0 && clientDeviceYear > 2015) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } if(os == 1 && clientDeviceYear > 2015) {
+            System.out.println("Установите версию приложения для Android по ссылке");
+    }
     }
 
     public static void task3() {
@@ -64,18 +63,30 @@ public class Main {
     public static void task5() {
         System.out.println("напишите номер месяца");
         byte numMouth = cin.nextByte();
-        if (1 <= numMouth && numMouth <= 12) {
-            if (numMouth <= 2 || numMouth == 12) {
+        switch (numMouth) {
+            case 12:
+            case 1:
+            case 2:
                 System.out.println("Зима");
-            } else if (numMouth <= 5) {
+                break;
+            case 3:
+            case 4:
+            case 5:
                 System.out.println("Весна");
-            } else if (numMouth <= 8) {
+                break;
+            case 6:
+            case 7:
+            case 8:
                 System.out.println("Лето");
-            } else {
+                break;
+            case 9:
+            case 10:
+            case 11:
                 System.out.println("Осень");
-            }
-        }else {
-            System.out.println("неверный месяц");
+                break;
+
+            default:
+                System.out.println("неверный месяц");
         }
     }
 
