@@ -1,13 +1,13 @@
 public class Main {
     public static void task1() {
-        int deposit = 15_000;
-        int target = 2_459_000;
+        final int DEPOSIT = 15_000;
+        final int TARGET = 2_459_000;
         int value = 0;
         int mouth = 1;
-        while (value <= target) {
-            value += deposit;
+        while (value <= TARGET) {
+            value = (int) (DEPOSIT + (value * 1.12));
             System.out.printf("Месяц %d, сумма накоплений равна %d рублей до цели осталось %d\n",
-                    mouth, value, target - value);
+                    mouth, value, TARGET - value);
             mouth++;
 
         }
@@ -38,8 +38,8 @@ public class Main {
     public static void task4() {
         int value = 15_000;
         int mouth = 1;
-        int target = 12_000_000;
-        while (value <= target) {
+        final int TARGET = 12_000_000;
+        while (value <= TARGET) {
             value += (int) (value * 0.07F);
             System.out.println(value + " " + mouth);
             mouth++;
@@ -49,9 +49,9 @@ public class Main {
     public static void task5() {
         int value = 15_000;
         int mouth = 1;
-        int target = 12_000_000;
+        final int TARGET = 12_000_000;
         byte counter = 1;
-        while (value <= target) {
+        while (value <= TARGET) {
             value += (int) (value * 0.07F);
             if (counter == 6){
                 System.out.println(value + " " + mouth);
@@ -75,13 +75,13 @@ public class Main {
     public static void task7() {
         int friday = 1;
         for (int i = friday; i <= 31; i += 7) {
-            System.out.println(i);
+            System.out.println("сегодня пятница!");
         }
     }
 
     public static void task8() {
-        int Year = 2024;
-        for (int i = 1580; i <= Year + 100; i += 79){
+        final int YEAR = 2024;
+        for (int i = 1580; i <= YEAR + 100; i += 79){
             if (i >= (2024 - 200)){
                 System.out.println(i);
             }
