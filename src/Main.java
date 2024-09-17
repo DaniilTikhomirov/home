@@ -6,11 +6,33 @@ public class Main {
         for (int i = 0; i < a.length; i++) {
             a[i] = i + 1;
         }
-        System.out.println(Arrays.toString(a));
         float[] b = {1.57F, 7.654F, 9.986F};
-        System.out.println(Arrays.toString(b));
         String[] c = {"a", "b", "c"};
-        System.out.println(Arrays.toString(c));
+        for (int i = 0; i < a.length; i++) {
+            System.out.print(a[i]);
+            if (i < a.length - 1){
+                System.out.print(",");
+            }
+        }
+        System.out.println();
+
+        for (int i = 0; i < b.length; i++) {
+            System.out.print(b[i]);
+            if (i < b.length - 1){
+                System.out.print(",");
+            }
+        }
+        System.out.println();
+
+        for (int i = 0; i < c.length; i++) {
+            System.out.print(c[i]);
+            if (i < c.length - 1){
+                System.out.print(",");
+            }
+        }
+        System.out.println();
+
+
         for (int j : a) {
             System.out.println(j);
         }
@@ -29,6 +51,7 @@ public class Main {
         for (int i = c.length; i >= 1; i--) {
             System.out.println(c[i - 1]);
         }
+
         for (int i = 0; i < a.length; i++) {
             if (a[i] % 2 != 0){
                 a[i] += 1;
