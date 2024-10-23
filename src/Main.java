@@ -15,7 +15,7 @@ public class Main {
         if (os == 1 && year < correctYear) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
         }
-        if (os == 0 && year < correctYear) {
+        if (os == 0 && year > correctYear) {
             System.out.println("становите облегченную версию приложения для iOS по ссылке");
         }
         if (os == 0 && year > correctYear) {
