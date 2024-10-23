@@ -19,12 +19,12 @@ public class Main {
         short clientDeviceYear = cin.nextShort();
         if (os == 1 && clientDeviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        } if(os == 0 && clientDeviceYear < 2015) {
+        }else if(os == 0 && clientDeviceYear < 2015) {
             System.out.println("становите облегченную версию приложения для iOS по ссылке");
         }
         if (os == 0 && clientDeviceYear > 2015) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        } if(os == 1 && clientDeviceYear > 2015) {
+        }else if(os == 1 && clientDeviceYear > 2015) {
             System.out.println("Установите версию приложения для Android по ссылке");
     }
     }
@@ -62,8 +62,8 @@ public class Main {
 
     public static void task5() {
         System.out.println("напишите номер месяца");
-        byte numMouth = cin.nextByte();
-        switch (numMouth) {
+        byte monthNumber = cin.nextByte();
+        switch (monthNumber) {
             case 12:
             case 1:
             case 2:
@@ -84,9 +84,6 @@ public class Main {
             case 11:
                 System.out.println("Осень");
                 break;
-
-            default:
-                System.out.println("неверный месяц");
         }
     }
 
