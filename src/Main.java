@@ -55,7 +55,7 @@ public class Main {
         if (age < 5){
             System.out.println("нельзя кататься на аттракционе");
         }
-        if (age > 5 && age < 14){
+        if (age >= 5 && age <= 14){
             System.out.println("можно кататься на аттракционе в сопровождении");
         }
         if (age > 14){
@@ -66,7 +66,7 @@ public class Main {
         System.out.println("сколько человек в вагоне ?");
         int human = cin.nextInt();
 
-        if (human >= 102){
+        if (human > 102){
             System.out.println("мест нет");
         }
         if (human >= 60 && human < 102){
