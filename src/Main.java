@@ -63,7 +63,9 @@ public class Main {
                         " Максимальная сумма трат за неделю составила %s рублей\n",
                 minElement(money), maxElement(money));
         System.out.printf("Средняя сумма трат за месяц составила %s рублей\n", averageElement(money));
-        reversePrint(reverseFullName);
+        for (int i = reverseFullName.length - 1; i >= 0; i--){
+            System.out.print(reverseFullName[i]);
+        }
 
     }
 }
