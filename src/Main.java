@@ -32,6 +32,30 @@ public class Main {
         }
         System.out.println();
 
+        for (int i = a.length - 1; i >= 0; i--){
+            System.out.print(a[i]);
+            if (i > 0){
+                System.out.print(",");
+            }
+        }
+        System.out.println();
+
+        for (int i = b.length - 1; i >= 0; i--){
+            System.out.print(b[i]);
+            if (i > 0){
+                System.out.print(",");
+            }
+        }
+        System.out.println();
+
+        for (int i = c.length - 1; i >= 0; i--){
+            System.out.print(c[i]);
+            if (i > 0){
+                System.out.print(",");
+            }
+        }
+        System.out.println();
+
 
         for (int j : a) {
             System.out.println(j);
